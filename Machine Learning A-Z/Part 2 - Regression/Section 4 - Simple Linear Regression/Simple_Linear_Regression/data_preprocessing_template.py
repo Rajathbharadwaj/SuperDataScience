@@ -20,10 +20,15 @@ lr = LinearRegression()
 lr.fit(X_train,y_train)
 y_pred = lr.predict(X_test) 
 
-
+plt.scatter(x='X_train',y='y_train',color ='red')
+plt.plot(X_train,lr.predict(X_train),color='blue')
+plt.title('Salary VS Experience(Training set)')
+plt.xlabel('Year of Ex')
+plt.ylabel('Salary')
+plt.show()
 
 plt.scatter(X_train, y_train, color = 'red')
-plt.plot(X_train, lr.predict(X_train), color = 'blue')
+plt.plot(X_train, regressor.predict(X_train), color = 'blue')
 plt.title('Salary vs Experience (Training set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
